@@ -28,13 +28,13 @@ public class ServiceMiyaApplication {
     @RequestMapping("/hi")
     public String callHome(){
         logger.log(Level.INFO, "calling trace service-hi  ");
-        return restTemplate.getForObject("http://localhost:8988/miya", String.class);
+        return restTemplate.getForObject("http://localhost:8988/info", String.class);
     }
 
-    @RequestMapping("/info")
+    @RequestMapping("/miya")
     public String info(){
         logger.log(Level.INFO, "calling trace service-hi ");
-        return "i'm service-hi";
+        return "i'm service-miya";
     }
 
     @Bean
